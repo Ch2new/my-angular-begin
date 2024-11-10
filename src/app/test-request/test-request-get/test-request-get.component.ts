@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { bookInterface } from './test-request-get';
+import { BookService } from '../../shared/book.service';
 
 @Component({
   selector: 'app-test-request-get',
@@ -9,7 +10,7 @@ import { bookInterface } from './test-request-get';
 })
 export class TestRequestGetComponent {
   bookList: bookInterface[] = [];
-  constructor(private http: HttpClient) { }
+  constructor(private service: BookService) { }
 
   // ngOnInit(): void {
   //   this.http.get<bookInterface[]>('https://anapioficeandfire.com/api/books')
@@ -20,7 +21,7 @@ export class TestRequestGetComponent {
   // }
 
   handleSearch(name: string) {
-    this.http.get<bookInterface[]>(`https://anapioficeandfire.com/api/books?name=${name}`)
+    this.service.httpBook(name)
     .subscribe((data) => {
       console.log(data);
       this.bookList = data
