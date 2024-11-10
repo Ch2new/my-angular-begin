@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sqaure-flex',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './sqaure-flex.component.scss'
 })
 export class SqaureFlexComponent {
-
+  @Input() divWidth = 200;
+  @Input() divHigh = 200;
 }

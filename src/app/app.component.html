@@ -1,13 +1,65 @@
-<!-- ep1 -->
-<!-- <app-action-bar (numberChange)="testNumberChange($event)" [step]="5"></app-action-bar>
-<app-action-bar (numberChange)="testNumberChange($event)" [step]="10"></app-action-bar>
-<button type="button" (click)="testClick()">test-EventBiding</button> -->
+<div class="flex flex-col gap-10 min-h-screen justify-center items-center">
+    
 
-<app-max-min-meter 
+    <!-- ep1 -->
+    <!-- <app-action-bar (numberChange)="testNumberChange($event)" [step]="5"></app-action-bar>
+    <app-action-bar (numberChange)="testNumberChange($event)" [step]="10"></app-action-bar>
+    <button type="button" (click)="testClick()">test-EventBiding</button> -->
+    
+    <!-- ep2 -->
+    <!-- <app-max-min-meter 
     minLabel='myMinLabel' 
     maxLabel='myMaxLabel'
-
+    
     (minChange)="doAppMinChange($event)"
     (maxChange)="doAppMaxChange($event)"
->
-</app-max-min-meter>
+    >
+</app-max-min-meter> -->
+
+<!-- ep3 -->
+<!-- <app-action-bar 
+[step]="20" 
+[(counter)]="appCounter"
+></app-action-bar>
+
+<app-sqaure-flex [divWidth]="appCounter" [divHigh]="squareHeight"></app-sqaure-flex> -->
+<!-- <div>
+    <span>Width: </span>
+    <button class="btn" (click)="this.squareWidth = 200">200px</button>
+    <button class="btn" (click)="this.squareWidth = 400">400px</button>
+    <button class="btn" (click)="this.squareWidth = 600">600px</button>
+</div> -->
+
+<!-- ep4 -->
+<!-- 
+<div *ngIf="isActivate else elseTemplate">
+    <app-action-bar></app-action-bar>
+</div>
+
+<ng-template #elseTemplate>
+    <div>
+        ng-template activated
+    </div>
+</ng-template>
+
+<button (click)="isActivate = !isActivate" type="button" class="btn !block">{{isActivate ? 'Close' : 'Open'}}</button> -->
+
+
+<!-- <app-action-bar [inputDisplay]="false"></app-action-bar> -->
+
+<!-- {{customerList.length}} -->
+
+<!-- <ul>
+    <li *ngFor="let customer of customerList; index as i">{{i + 1}}.{{customer}}
+        <button class="btn" type="button" (click)="removeCustomer(i)">remove</button>
+    </li>
+</ul>
+
+<button (click)="pushCustomer()" type="button">push</button>
+<button (click)="unShiftCustomer()" type="button">unShift</button> -->
+
+
+<!-- ep5 -->
+<app-test-request-get></app-test-request-get>
+
+</div>
